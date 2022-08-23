@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+}
+/* resuable code */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.btn {
+  background-color: rgb(86, 110, 30);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+}
+
+/* .global-msg is parent here */
+.global-msg {
+  background: rgb(21, 21, 22);
+  color: white;
+  line-height: 32px;
+}
+
+/* .global-msg is child here */
+.gbl-content {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar {
+  background-color: rgb(76, 121, 78);
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+/* 
+top nav section */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  /* to override dot in list */
+  list-style: none;
+}
+
+.menu ul li {
+  margin-left: 10px;
+}
+
+/* hero section */
+.hero {
+  background: url(img/hero.jpg) no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.63);
+  width: 450px;
+  color: beige;
+  padding: 10px, 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+/* main section */
+.main {
+  display: flex;
+  margin-top: 32px;
+}
+.main-content {
+  width: 66%;
+  margin-right: 1rem;
+}
+.side-links {
+  width: 34%;
+}
+/* aside section */
+.read-by-country,
+.read-by-date {
+  background-color: rgb(191, 235, 125);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+/* 
+this is overriding as to read by date */
+.read-by-date {
+  background: rgb(150, 192, 88);
+}
+
+article {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.art-img {
+  width: 400px;
+  margin-right: 20px;
+}
+
+.title {
+  font-style: 1.3rem;
+  font-weight: bolder;
+}
+
+/* recc section */
+.recc {
+  background: rgb(137, 216, 216);
+  margin-top: 2rem;
+  padding: 20px;
+}
+.card-list,
+.card-list > div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.card {
+  margin: 10px 15px;
+  background-color: white;
+  border-radius: 5px;
+
+  padding-bottom: 5px;
+  box-shadow: 5px 5px 10px 5px rgb(104, 99, 99);
+}
+.btn-card {
+  width: 100%;
+} /* responice
+
+/* subscription section */
+.subs {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.yang {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin-top: 32px;
+}
+input {
+  padding: 8px;
+}
+.submit {
+  background-color: red;
+  font-weight: bolder;
+}
+/* 
+for css bottom override above  */
+/* media query */
+
+@media (max-width: 992px) {
+  .card-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* small screen button as a priority of overriding */
+@media (max-width: 600px) {
+  /* main section */
+  .main {
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+  }
+  .main-content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  article {
+    display: flex;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    flex-direction: column;
+  }
+  .art-img {
+    width: 300px;
+    margin-right: 0;
+  }
+  .side-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .side-links > div {
+    width: 40%;
+  }
+
+  /* recc section */
+  .card-list,
+  .card-list > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
